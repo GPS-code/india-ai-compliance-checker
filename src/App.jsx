@@ -329,7 +329,7 @@ export default function App() {
   const [orgType, setOrgType] = useState("");
 
   const allModuleQuestions = MODULES.flatMap((m) => m.questions.map((q) => ({ ...q, moduleId: m.id, moduleIdx: MODULES.indexOf(m) })));
-  const flatIndex = MODULES.slice(0, currentModule).reduce((acc, m) => acc + m.questions.length, 0) + currentQ;
+  
   const totalQ = allModuleQuestions.length;
   const progress = Math.round((Object.keys(answers).length / totalQ) * 100);
 
@@ -577,7 +577,7 @@ export default function App() {
 
   if (phase === "results") {
     const riskColor = riskColors[riskLevel];
-    const riskBg = riskBgs[riskLevel];
+    
     const obligations = OBLIGATIONS_BY_RISK[riskLevel];
 
     const hasGovtFlag = answers["q1_3"] === "yes";
