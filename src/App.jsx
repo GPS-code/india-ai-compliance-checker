@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const MODULES = [
   {
@@ -462,6 +463,7 @@ export default function App() {
   if (phase === "intro") {
     return (
       <div style={styles.app}>
+        <Analytics />
         <header style={styles.header}>
           <div style={styles.headerInner}>
             <div>
@@ -520,6 +522,7 @@ export default function App() {
 
     return (
       <div style={styles.app}>
+        <Analytics />
         <header style={styles.header}>
           <div style={styles.headerInner}>
             <div>
@@ -586,6 +589,7 @@ export default function App() {
 
     return (
       <div style={styles.app}>
+        <Analytics />
         <header style={styles.header}>
           <div style={styles.headerInner}>
             <div>
