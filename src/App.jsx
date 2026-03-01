@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const MODULES = [
   {
@@ -509,6 +510,7 @@ export default function App() {
             </div>
           </div>
         </main>
+        <Analytics />
       </div>
     );
   }
@@ -572,6 +574,7 @@ export default function App() {
             <div style={{ fontSize: 11, color: "#94a3b8" }}>{curModule.desc}</div>
           </div>
         </main>
+        <Analytics />
       </div>
     );
   }
@@ -707,6 +710,7 @@ export default function App() {
 
           <button style={styles.restartBtn} onClick={restart}>← Start a New Assessment</button>
         </main>
+        <Analytics />
       </div>
     );
   }
